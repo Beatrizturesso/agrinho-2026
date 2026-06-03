@@ -1,0 +1,138 @@
+<body>
+<title>
+GUIA DE DESENVOLVIMENTO
+Agrinho 2026
+
+Projeto de Programação Web com Inteligência Artificial
+
+Tema oficial
+Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente
+
+Objetivo: criar uma aplicação web simples, responsiva e interativa, usando IA como apoio, com foco em
+
+sustentabilidade no campo.
+
+Roteiro rápido
+Etapa O que fazer Resultado esperado
+1 Criar o repositório público no GitHub. Repositório chamado exatamente
+
+agrinho2026.
+
+2 Usar o prompt mestre em uma IA. Códigos base para index.html, style.css
+
+e qscript.js.
+
+3
+
+Criar os arquivos no GitHub e colar os
+códigos.
+
+Página organizada com HTML, CSS e
+JavaScript.
+
+4
+
+Testar, ajustar e corrigir com apoio da
+IA. Projeto funcional e mais bem acabado.
+5 Publicar e revisar a apresentação final. Link pronto para entrega e
+demonstração.
+
+Passo 1 - Criar o repositório no GitHub
+ Acesse sua conta no GitHub.
+ Crie um novo repositório público chamado exatamente: agrinho2026.
+ Marque a opção para adicionar um arquivo README.md.
+ Após criar, confira se o nome está correto, pois ele será usado na publicação do projeto.
+
+Passo 2 - Interagir com a IA: o prompt mestre
+ Abra a IA de sua preferência, como ChatGPT ou Gemini.
+ Copie e cole o comando abaixo para gerar a estrutura base do projeto.
+ Peça para a IA entregar os três arquivos separados, para facilitar a cópia no GitHub.
+
+Guia Agrinho 2026 - Programação Web com IA
+
+Prompt mestre para copiar e colar
+Atue como um programador sênior. Preciso criar uma aplicação web sobre o tema do Agrinho 2026: 'Agro forte, futuro
+sustentável: equilíbrio entre produção e meio ambiente'. Forneça separadamente o código completo de 3 arquivos
+integrados: 1) index.html (com estrutura moderna e seções informativas), 2) style.css (com design responsivo nas cores
+verde e terra) e 3) qscript.js (com uma função interativa, como uma calculadora de impacto sustentável ou quiz agrícola).
+
+Passo 3 - Criar e colar os arquivos no GitHub
+Dentro do repositório agrinho2026, clique em Add file -> Create new file e crie cada arquivo abaixo:
+Arquivo Função no projeto
+index.html Contém os textos, títulos, imagens, botões e a estrutura
+
+principal da página.
+
+style.css Define cores, fontes, espaçamento, responsividade e
+
+organização visual.
+
+qscript.js Executa a lógica interativa: quiz, calculadora, mensagens
+
+ou botões dinâmicos.
+
+Atenção ao nome do JavaScript
+Use qscript.js apenas se o arquivo index.html chamar exatamente esse nome. Se o HTML usar script.js, troque para
+qscript.js ou renomeie o arquivo para o mesmo nome indicado no HTML.
+
+Passo 4 - Ajustes rápidos com IA
+ Para mudar cores: cole o CSS na IA e peça, por exemplo: "Altere a cor de fundo do style.css para um verde
+mais claro".
+ Para melhorar textos: cole o HTML e peça: "Melhore os textos do index.html para focar em rotação de
+culturas".
+ Para corrigir erros: copie o trecho com problema e peça: "Este código está quebrado, corrija para mim e
+explique onde estava o erro".
+ Depois de cada ajuste, salve o arquivo no GitHub e teste a página novamente.
+
+Passo 5 - Publicar o site pelo GitHub Pages
+ No repositório, acesse Settings -> Pages.
+ Em Branch, selecione main e a pasta /root, depois clique em Save.
+ Aguarde a geração do link do GitHub Pages.
+ Abra o link publicado e teste no computador e no celular.
+
+Guia Agrinho 2026 - Programação Web com IA
+
+Ideias para deixar o projeto mais completo
+Item Sugestão
+Seções informativas
+
+Introdução ao tema, produção responsável, conservação do
+solo, uso consciente da água, tecnologia no campo e
+conclusão.
+
+Interatividade Quiz agrícola, calculadora de economia de água, cards
+clicáveis ou simulador simples de práticas sustentáveis.
+Recursos visuais Cores verde e terra, imagens do campo, ícones simples e
+
+gráficos de impacto.
+
+Acessibilidade Textos legíveis, contraste adequado, descrições alternativas
+
+em imagens e botões fáceis de clicar.
+
+Autoria Adicionar uma seção com nome do aluno, escola, turma e
+
+professor orientador, se a escola permitir.
+
+Checklist antes de entregar
+[ ] O repositório está público e se chama agrinho2026.
+[ ] Os arquivos index.html, style.css e qscript.js existem no repositório.
+[ ] O HTML chama corretamente o CSS e o JavaScript.
+[ ] O site abre pelo GitHub Pages.
+[ ] A página funciona no celular.
+[ ] Há pelo menos uma função interativa funcionando.
+[ ] O conteúdo está ligado ao tema oficial do Agrinho 2026.
+[ ] O README.md explica o objetivo do projeto e como acessar o site.
+
+Modelo curto para o README.md
+# Agrinho 2026
+Projeto de Programação Web sobre o tema "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente".
+O site apresenta informações sobre sustentabilidade no campo e inclui uma atividade interativa para conscientizar
+sobre práticas agrícolas responsáveis.
+Tecnologias utilizadas: HTML, CSS e JavaScript.
+
+Fonte consultada
+Tema oficial conferido em notícia da Secretaria de Estado da Educação do Paraná, publicada em 18/05/2026,
+e em material do Sistema FAEP/SENAR-PR do Agrinho 2026.
+</title>
+</body>

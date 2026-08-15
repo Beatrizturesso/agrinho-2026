@@ -1,0 +1,1286 @@
+```css
+/* =========================================================
+   AGROSMART - AGRINHO 2026
+   Projeto: Beatriz Turesso Staron
+   Colégio Estadual Dom Pedro II
+   Professor: Luiz Alessandro
+========================================================= */
+
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+:root {
+    --verde-escuro: #123c2a;
+    --verde: #28734a;
+    --verde-claro: #5fa66d;
+    --verde-suave: #dff0df;
+
+    --bege: #f5f0e4;
+    --creme: #fffdf7;
+    --marrom: #6b4f35;
+    --marrom-claro: #9a7958;
+
+    --branco: #ffffff;
+    --preto: #172019;
+    --cinza: #66706a;
+    --cinza-claro: #e6ebe6;
+
+    --sombra: 0 15px 40px rgba(18, 60, 42, 0.10);
+
+    --raio: 18px;
+    --transicao: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--creme);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+    width: 100%;
+    background: rgba(255, 253, 247, 0.96);
+    border-bottom: 1px solid var(--cinza-claro);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.cabecalho-conteudo {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    white-space: nowrap;
+}
+
+.logo > span:last-child > span {
+    color: var(--verde-claro);
+}
+
+.logo-icone {
+    font-size: 1.7rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu a {
+    color: var(--verde-escuro);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.menu a:hover {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   ELEMENTOS GERAIS
+========================================================= */
+
+.secao {
+    padding: 100px 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--verde);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.12;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 span {
+    color: var(--verde-claro);
+}
+
+.titulo-secao p {
+    color: var(--cinza);
+    font-size: 1.05rem;
+}
+
+.centralizado {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: var(--transicao);
+}
+
+.botao-principal {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.botao-principal:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background: transparent;
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+.botao-secundario:hover {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 76px);
+    background:
+        radial-gradient(circle at 80% 20%, rgba(95, 166, 109, 0.20), transparent 30%),
+        linear-gradient(135deg, var(--bege), var(--creme));
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.hero-texto h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.98;
+    color: var(--verde-escuro);
+    margin-bottom: 28px;
+    letter-spacing: -3px;
+}
+
+.hero-texto h1 span {
+    display: block;
+    color: var(--verde-claro);
+}
+
+.hero-subtitulo {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--marrom);
+    margin-bottom: 20px;
+}
+
+.hero-texto > p:not(.hero-subtitulo) {
+    color: var(--cinza);
+    max-width: 620px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planta {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: var(--verde-suave);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9rem;
+    box-shadow: var(--sombra);
+}
+
+.monitoramento-card {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    width: 290px;
+    background: var(--branco);
+    border-radius: var(--raio);
+    padding: 22px;
+    box-shadow: var(--sombra);
+}
+
+.monitoramento-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+}
+
+.status {
+    color: var(--verde);
+    font-size: 0.7rem;
+}
+
+.monitoramento-dado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.monitoramento-dado span {
+    display: block;
+    color: var(--cinza);
+    font-size: 0.8rem;
+}
+
+.monitoramento-dado strong {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+}
+
+.icone-dado {
+    font-size: 2rem;
+}
+
+.barra {
+    height: 9px;
+    background: var(--cinza-claro);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.barra-progresso {
+    width: 30%;
+    height: 100%;
+    background: var(--verde-claro);
+    border-radius: inherit;
+}
+
+.monitoramento-card p {
+    font-size: 0.78rem;
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   TEMA
+========================================================= */
+
+.tema {
+    background: var(--branco);
+}
+
+.cards-tema {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card-tema {
+    padding: 32px;
+    background: var(--bege);
+    border: 1px solid #e9e1d2;
+    border-radius: var(--raio);
+    transition: var(--transicao);
+}
+
+.card-tema:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--sombra);
+}
+
+.card-icone {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.card-tema h3 {
+    color: var(--verde-escuro);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-tema p {
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   PROBLEMA
+========================================================= */
+
+.problema {
+    background: var(--bege);
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.texto-secao p {
+    color: var(--cinza);
+    margin-bottom: 18px;
+}
+
+.lista-problemas {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.problema-card {
+    display: flex;
+    gap: 18px;
+    padding: 23px;
+    background: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: 0 8px 25px rgba(18, 60, 42, 0.06);
+}
+
+.problema-icone {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: var(--verde-suave);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.problema-card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 5px;
+}
+
+.problema-card p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   MATEMÁTICA
+========================================================= */
+
+.matematica {
+    background: var(--branco);
+}
+
+.formula-card {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    border-radius: var(--raio);
+    padding: 35px;
+    box-shadow: var(--sombra);
+}
+
+.formula-topo {
+    color: #b8d9ba;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.formula {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.formula span {
+    color: #c7d5cc;
+    font-size: 0.9rem;
+}
+
+.formula strong {
+    font-size: 2rem;
+    color: #a9d99e;
+    margin: 4px 0;
+}
+
+.nota {
+    margin-top: 22px;
+    color: #b7c8bd;
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   PROGRAMAÇÃO
+========================================================= */
+
+.programacao {
+    background: #17251e;
+}
+
+.programacao .titulo-secao h2 {
+    color: var(--branco);
+}
+
+.programacao .titulo-secao h2 span {
+    color: #9fd594;
+}
+
+.programacao .titulo-secao p {
+    color: #b9c8bf;
+}
+
+.programacao code {
+    background: var(--verde-suave);
+    color: var(--verde-escuro);
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+.codigo-card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #0c1711;
+    border-radius: var(--raio);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.codigo-barra {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 18px;
+    background: #101d15;
+}
+
+.codigo-barra span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #52705d;
+}
+
+.codigo-barra small {
+    color: #809889;
+    margin-left: 12px;
+}
+
+.codigo-card pre {
+    padding: 35px;
+    overflow-x: auto;
+}
+
+.codigo-card code {
+    color: #a9d99e;
+    background: transparent;
+    font-family: Consolas, monospace;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.codigo-explicacao {
+    padding: 22px 35px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.codigo-explicacao strong {
+    color: var(--branco);
+}
+
+.codigo-explicacao p {
+    color: #9aac9f;
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   SOLUÇÃO
+========================================================= */
+
+.solucao {
+    background: var(--creme);
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.passo {
+    position: relative;
+    background: var(--branco);
+    border-radius: var(--raio);
+    padding: 30px 24px;
+    box-shadow: 0 8px 25px rgba(18, 60, 42, 0.06);
+    transition: var(--transicao);
+}
+
+.passo:hover {
+    transform: translateY(-6px);
+}
+
+.passo-numero {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--verde-claro);
+}
+
+.passo-icone {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.passo h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+.passo p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   IOT
+========================================================= */
+
+.tecnologia {
+    background: var(--verde-suave);
+}
+
+.iot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.iot-card {
+    background: var(--branco);
+    padding: 35px;
+    border-radius: var(--raio);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: var(--transicao);
+}
+
+.iot-card:hover {
+    transform: translateY(-6px);
+}
+
+.iot-card.destaque {
+    border-color: var(--verde-claro);
+}
+
+.iot-icone {
+    font-size: 3rem;
+    margin-bottom: 18px;
+}
+
+.iot-card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+.iot-card p {
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   SIMULADOR
+========================================================= */
+
+.simulador {
+    background: var(--branco);
+}
+
+.simulador-box {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 35px;
+    background: var(--bege);
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+}
+
+.simulador-controle {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: var(--raio);
+}
+
+.simulador-controle label {
+    display: block;
+    color: var(--verde-escuro);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.valor-umidade {
+    color: var(--verde);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--verde);
+}
+
+.escala {
+    display: flex;
+    justify-content: space-between;
+    color: var(--cinza);
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+.simulador-controle .botao {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.resultado {
+    min-height: 300px;
+    padding: 30px;
+    border-radius: var(--raio);
+    background: var(--verde-escuro);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.resultado-icone {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.resultado h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.resultado p {
+    color: #c7d5cc;
+    max-width: 330px;
+}
+
+.observacao {
+    max-width: 900px;
+    margin: 18px auto 0;
+    color: var(--cinza);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   SUSTENTABILIDADE
+========================================================= */
+
+.sustentabilidade {
+    background: var(--bege);
+}
+
+.impactos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.impacto {
+    background: var(--branco);
+    padding: 28px;
+    border-radius: var(--raio);
+    transition: var(--transicao);
+}
+
+.impacto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.impacto > span {
+    font-size: 2.3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.impacto h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 8px;
+}
+
+.impacto p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   DESAFIOS
+========================================================= */
+
+.desafios {
+    background: var(--branco);
+}
+
+.desafios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.desafio {
+    padding: 28px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: var(--raio);
+    transition: var(--transicao);
+}
+
+.desafio:hover {
+    border-color: var(--verde-claro);
+    transform: translateY(-5px);
+}
+
+.desafio > span {
+    font-size: 2.2rem;
+}
+
+.desafio h3 {
+    margin: 15px 0 8px;
+    color: var(--verde-escuro);
+}
+
+.desafio p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz {
+    background: var(--verde-suave);
+}
+
+.quiz-box {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+}
+
+.quiz-numero {
+    display: block;
+    color: var(--verde);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.quiz-box h3 {
+    color: var(--verde-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alternativa {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 12px;
+    background: var(--branco);
+    color: var(--preto);
+    text-align: left;
+    transition: var(--transicao);
+}
+
+.alternativa:hover {
+    border-color: var(--verde-claro);
+    background: var(--verde-suave);
+}
+
+.resultado-quiz {
+    min-height: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONCLUSÃO
+========================================================= */
+
+.conclusao {
+    background: var(--verde-escuro);
+}
+
+.conclusao-box {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.conclusao-box .etiqueta {
+    color: #9fd594;
+}
+
+.conclusao-box h2 {
+    color: var(--branco);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.conclusao-box p {
+    color: #c3d1c8;
+    margin-bottom: 18px;
+}
+
+.frase-final {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 18px 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    color: var(--branco);
+}
+
+.frase-final span {
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre {
+    background: var(--creme);
+}
+
+.autora-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background: var(--branco);
+    border-radius: var(--raio);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: var(--sombra);
+}
+
+.autora-icone {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--verde-suave);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    flex-shrink: 0;
+}
+
+.autora-info h3 {
+    color: var(--verde-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.autora-info p {
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   REFERÊNCIAS
+========================================================= */
+
+.referencias {
+    background: var(--branco);
+}
+
+.referencias-lista {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.referencias-lista p {
+    padding: 18px 20px;
+    background: var(--bege);
+    border-radius: 12px;
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    background: #0c2419;
+    color: var(--branco);
+    padding: 45px 0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.rodape .logo {
+    color: var(--branco);
+    margin-bottom: 8px;
+}
+
+.rodape > .container > p {
+    color: #aabdb1;
+    font-size: 0.9rem;
+}
+
+.rodape-autor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    margin-top: 18px;
+    padding-top: 18px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b9c8bf;
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .menu {
+        gap: 14px;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+    }
+
+    .hero-conteudo {
+        gap: 40px;
+    }
+
+    .hero-texto h1 {
+        font-size: 4rem;
+    }
+
+    .passos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impactos-grid,
+    .desafios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .cabecalho-conteudo {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-texto {
+        margin: 0 auto;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 400px;
+    }
+
+    .monitoramento-card {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .cards-tema,
+    .iot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .simulador-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .container {
+        width: min(92%, 1180px);
+    }
+
+    .secao {
+        padding: 70px 0;
+    }
+
+    .menu {
+        gap: 8px 13px;
+    }
+
+    .menu a {
+        font-size: 0.73rem;
+    }
+
+    .hero-texto h1 {
+        font-size: 3rem;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-subtitulo {
+        font-size: 1.1rem;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .hero-botoes .botao {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 330px;
+    }
+
+    .planta {
+        width: 230px;
+        height: 230px;
+        font-size: 6rem;
+    }
+
+    .monitoramento-card {
+        width: 250px;
+        bottom: 0;
+    }
+
+    .cards-tema,
+    .passos,
+    .impactos-grid,
+    .desafios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao h2 {
+        font-size: 2.1rem;
+    }
+
+    .simulador-box {
+        padding: 18px;
+    }
+
+    .simulador-controle,
+    .resultado {
+        padding: 25px;
+    }
+
+    .quiz-box {
+        padding: 25px;
+    }
+
+    .autora-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .frase-final {
+        flex-direction: column;
+    }
+
+    .rodape-autor {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+}
+```
